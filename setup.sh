@@ -15,12 +15,3 @@ sudo chmod +x ./install
 sudo ./install auto
 sudo service codedeploy-agent start
 sudo npm install pm2 -g
-sudo curl -o /root/amazon-cloudwatch-agent.deb https://s3.amazonaws.com/amazoncloudwatch-agent/debian/amd64/latest/amazon-cloudwatch-agent.deb
-sudo dpkg -i -E /root/amazon-cloudwatch-agent.deb
-sudo apt-get clean
-sudo rm -rf /var/lib/apt/lists/*
-sudo dpkg --configure -a
-wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
-sudo dpkg -i amazon-cloudwatch-agent.deb
-sudo apt-get update -y
-sudo apt-get -y upgrade
