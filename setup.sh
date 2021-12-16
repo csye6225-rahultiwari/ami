@@ -19,7 +19,9 @@ sudo rm -rf /var/lib/apt/lists/*
 sudo dpkg --configure -a
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 sudo dpkg -i amazon-cloudwatch-agent.deb
-udo apt-get install -f
+sudo apt-get install -f
 sudo apt-get -qy update
 sudo apt-get -qy upgrade
-sudo service codedeploy-agent stop
+sudo service amazon-cloudwatch-agent start
+sudo service codedeploy-agent start
+sudo service codedeploy-agent status
